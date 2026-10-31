@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brews &amp; Blends by Leilani | Lostant, IL</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf5ec;--surface:#fff;--ink:#3b2417;--muted:#7a6252;--accent:#b5683a;--accent2:#6f8f6a;--hero:#3b2417;--hero-ink:#fbf5ec;--line:#ecdfce;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b120d;--surface:#2a1c14;--ink:#f3e7d8;--muted:#b9a592;--accent:#e0925f;--accent2:#9bbd96;--hero:#120b07;--hero-ink:#f3e7d8;--line:#3d2a1f}}
+:root[data-theme="dark"]{--bg:#1b120d;--surface:#2a1c14;--ink:#f3e7d8;--muted:#b9a592;--accent:#e0925f;--accent2:#9bbd96;--hero:#120b07;--hero-ink:#f3e7d8;--line:#3d2a1f}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--ink);font-family:'Nunito',system-ui,sans-serif;line-height:1.6}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif}
+a{color:inherit}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;justify-content:space-between;align-items:center;padding:.8rem 5vw;background:var(--bg);border-bottom:1px solid var(--line)}
+nav b{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--accent)}
+nav div{display:flex;gap:1.2rem;font-weight:600;font-size:.95rem}
+nav a{text-decoration:none}nav a:hover{color:var(--accent)}
+@media(max-width:560px){nav div a:nth-child(n+4){display:none}}
+.hero{background:var(--hero);color:var(--hero-ink);text-align:center;padding:5rem 6vw 6rem;position:relative;overflow:hidden}
+.cup{position:relative;width:90px;margin:0 auto 1rem;font-size:3.6rem}
+.steam{position:absolute;left:50%;top:-8px;display:flex;gap:8px;transform:translateX(-50%)}
+.steam i{width:6px;height:26px;border-radius:6px;background:rgba(255,255,255,.55);filter:blur(3px);animation:rise 2.6s infinite ease-in}
+.steam i:nth-child(2){animation-delay:.8s}.steam i:nth-child(3){animation-delay:1.6s}
+@keyframes rise{0%{transform:translateY(10px) scaleY(.6);opacity:0}40%{opacity:.8}100%{transform:translateY(-26px) scaleY(1.2);opacity:0}}
+.hero h1{font-size:clamp(2.3rem,7vw,4.2rem);line-height:1.1}
+.hero h1 span{color:var(--accent)}
+.hero p{max-width:540px;margin:1rem auto 1.8rem;opacity:.9}
+.btn{display:inline-block;padding:.8rem 1.6rem;border-radius:99px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;margin:.3rem;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;border:2px solid var(--accent);color:var(--hero-ink)}
+.badge{display:inline-block;margin-top:1.6rem;padding:.4rem 1rem;border-radius:99px;background:rgba(255,255,255,.1);font-size:.9rem}
+section{padding:4.5rem 6vw;max-width:1100px;margin:auto}
+.eyebrow{color:var(--accent2);font-weight:700;letter-spacing:.15em;text-transform:uppercase;font-size:.8rem}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);margin:.3rem 0 1rem}
+.grid{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:2rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.5rem;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 12px 28px rgba(0,0,0,.12)}
+.card .ic{font-size:2rem}
+.card h3{font-size:1.2rem;margin:.5rem 0 .3rem}
+.card p{color:var(--muted);font-size:.95rem}
+.feature{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:18px;padding:1.6rem;margin-top:2rem}
+.feature h3{color:var(--accent)}
+.reviews .card p{font-style:italic;color:var(--ink)}
+.reviews .card small{display:block;margin-top:.8rem;color:var(--accent2);font-weight:700;font-style:normal}
+.stars{color:#e3a72f;letter-spacing:2px}
+.visit{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+table{width:100%;border-collapse:collapse}
+td{padding:.55rem 0;border-bottom:1px dashed var(--line)}
+td:last-child{text-align:right;font-weight:700}
+.today td{color:var(--accent)}
+footer{text-align:center;padding:2.5rem 6vw;background:var(--hero);color:var(--hero-ink);font-size:.92rem}
+footer a{color:var(--accent)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav><b>Brews &amp; Blends</b><div><a href="#menu">Menu</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a><a href="tel:+18153689533">Call</a></div></nav>
+
+<header class="hero">
+  <div class="cup"><div class="steam"><i></i><i></i><i></i></div>☕</div>
+  <h1>Brews &amp; Blends <span>by Leilani</span></h1>
+  <p>A cozy little oasis off the highway in Lostant, Illinois. Fresh coffee, lattes, smoothies, teas, beer &amp; wine, served with a smile.</p>
+  <a class="btn" href="#menu">Explore the Menu</a><a class="btn ghost" href="#visit">Plan Your Visit</a><br>
+  <span class="badge"><span class="stars">★★★★★</span> 4.9 from 70 Google reviews</span>
+</header>
+
+<section id="menu" class="reveal">
+  <div class="eyebrow">What we serve</div>
+  <h2>Made fresh, made with care</h2>
+  <div class="grid">
+    <div class="card"><div class="ic">☕</div><h3>Coffee &amp; Drip</h3><p>Freshly brewed drip coffee and espresso drinks to start your morning right.</p></div>
+    <div class="card"><div class="ic">🥛</div><h3>Lattes</h3><p>Smooth, handcrafted lattes with your choice of milk, including oat.</p></div>
+    <div class="card"><div class="ic">🥤</div><h3>Smoothies</h3><p>Deliciously blended smoothies made with decently healthy ingredients.</p></div>
+    <div class="card"><div class="ic">🍵</div><h3>Teas &amp; Matcha</h3><p>Soothing teas and vibrant matcha for a calmer kind of pick-me-up.</p></div>
+    <div class="card"><div class="ic">⚡</div><h3>Energy Drinks</h3><p>Colorful, yummy energy drinks when you need an extra boost.</p></div>
+    <div class="card"><div class="ic">🍷</div><h3>Beer &amp; Wine</h3><p>Unwind with a glass or a cold one from our small selection.</p></div>
+  </div>
+  <div class="feature">
+    <div class="eyebrow">Guest favorite</div>
+    <h3>Lavender Honey Latte</h3>
+    <p>Our customers say to ask for it with oat milk. Floral, lightly sweet and wonderfully comforting.</p>
+  </div>
+</section>
+
+<section id="reviews" class="reviews reveal">
+  <div class="eyebrow">Loved by locals &amp; travelers</div>
+  <h2>What guests are saying</h2>
+  <div class="grid">
+    <div class="card"><div class="stars">★★★★★</div><p>“A little oasis off the highway. Clean, friendly service, and the best latte I’ve ever had!”</p><small>Brigid · Google</small></div>
+    <div class="card"><div class="stars">★★★★★</div><p>“Excellent smoothies with decently healthy ingredients and excellent coffee.”</p><small>Google review</small></div>
+    <div class="card"><div class="stars">★★★★★</div><p>“The staff is super friendly and they make such delicious smoothies, coffee, teas and matcha.”</p><small>Melinda H · Google</small></div>
+    <div class="card"><div class="stars">★★★★★</div><p>“Been here a couple of times during vacation. Very nice and great coffee. Taylor was very friendly!”</p><small>Google review</small></div>
+  </div>
+</section>
+
+<section id="visit" class="reveal">
+  <div class="eyebrow">Come say hello</div>
+  <h2>Visit us</h2>
+  <div class="visit">
+    <div>
+      <p><b>📍 Address</b><br>1310 N. IL Route 251, Suite B<br>Lostant, IL 61334</p><br>
+      <p><b>📞 Phone</b><br><a href="tel:+18153689533">(815) 368-9533</a></p><br>
+      <p><b>💵 Price</b><br>$1–10 per person</p><br>
+      <a class="btn" href="https://maps.google.com/?q=1310+N+IL+Route+251+Suite+B+Lostant+IL+61334" target="_blank" rel="noopener">Get Directions</a>
+      <a class="btn" style="background:var(--accent2)" href="https://www.facebook.com/p/Brews-Blends-by-Leilani-61573678011353/" target="_blank" rel="noopener">Follow on Facebook</a>
+    </div>
+    <div class="card">
+      <h3>Opening hours</h3>
+      <table id="hours">
+        <tr data-d="1"><td>Monday</td><td>7 am – 12 pm</td></tr>
+        <tr data-d="2"><td>Tuesday</td><td>7 am – 12 pm</td></tr>
+        <tr data-d="3"><td>Wednesday</td><td>7 am – 12 pm</td></tr>
+        <tr data-d="4"><td>Thursday</td><td>7 am – 12 pm</td></tr>
+        <tr data-d="5"><td>Friday</td><td>7 am – 12 pm</td></tr>
+        <tr data-d="6"><td>Saturday</td><td>8 am – 3 pm</td></tr>
+        <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
+      </table>
+      <p style="color:var(--muted);font-size:.85rem;margin-top:.8rem">Hours may vary, so please call to confirm.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© <span id="yr">2026</span> Brews &amp; Blends by Leilani · Lostant, Illinois</p>
+  <p><a href="tel:+18153689533">(815) 368-9533</a></p>
+</footer>
+
+<script>
+// Highlight today's opening hours
+var d=new Date().getDay(),r=document.querySelector('#hours tr[data-d="'+d+'"]');
+if(r)r.className='today';
+document.getElementById('yr').textContent=new Date().getFullYear();
+// Fade sections in on scroll
+var els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+  els.forEach(function(el){io.observe(el)});
+}else{els.forEach(function(el){el.classList.add('in')})}
+</script>
+</body>
+</html>
